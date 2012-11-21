@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+img, body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+img {
+  max-width: 500px;
+  max-height: 800px;
+}
+
+</style>
+
+</head>
+<body bgColor="#eee">
+<script>
+
+  var loaded = false, wait;
+
+  function onImageLoaded() {
+    loaded = true;
+    var w = document.img01.width;
+    var h = document.img01.height;	
+    alert('dims:' + w + ',' + h);
+  }
+
+  function loadImage(url, preload) {
+
+    if (preload) {
+      document.img01.src = 'img/loading.gif';
+      alert('dims:32,32');
+    }
+
+    document.img01.src = url;
+
+    wait = setInterval(function () {
+      if (loaded) {
+        clearInterval(wait)
+      } else {
+        var w = document.img01.width;
+        var h = document.img01.height;	
+        alert('dims:' + w + ',' + h);
+      }
+     }, 0);
+  }
+
+  function onImageFailed() {
+    document.img01.src = 'img/error.jpg';
+  }
+
+</script>
+
+
+  <img name="img01" onload="onImageLoaded()" onerror="javescript:onImageFailed()" />
+  
+
+
+</body>
+</html>
