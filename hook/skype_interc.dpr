@@ -18,7 +18,7 @@ const
 
   STR_MAIN_FORM_CLASS = 'TfrmSkypePopup';
   STR_MAIN_FORM_CAPTION = 'SkypePopup5738';
-  LINK_COLOR = $FF9933;
+  LINK_COLOR = $CA7800;
 
 var
   g_hhook1, g_hhook2, g_hhook3: Integer;
