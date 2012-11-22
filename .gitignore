@@ -41,3 +41,6 @@ Thumbs.db
 *.~*
 *.dcu
 *.res
+
+# Project related #
+*.bak
